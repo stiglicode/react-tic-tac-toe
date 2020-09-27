@@ -1,0 +1,19 @@
+.m--mm {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.m--mm .m-m-row:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.m--mm .m-m-row {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-align: center;
+  z-index: 1;
+  padding: .5em 0;
+}

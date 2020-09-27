@@ -1,0 +1,108 @@
+.m--pvp {
+    // .pvp-title {
+    // }
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    .setter-nicknames {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        justify-content: space-between;
+        .nicknames {
+            position: relative;
+            display: flex;
+            label {
+                position: absolute;
+                font-size: 20px;
+                pointer-events: none;
+                top: 0px;
+                transition: .3s;
+                opacity: .3;
+                left: .7em;
+            }
+            input[type=text] {
+                width: 100%;
+                background: none;
+                border: unset;
+                border-bottom: solid 2px rgba(#ffffff, .1);
+                font-size: 20px;
+                padding-left: .7em;
+                padding-right: 1.5em;
+                &:focus~label,
+                &:valid~label {
+                    font-size: 16px;
+                    top: -30px;
+                    left: 0;
+                    opacity: 1;
+                }
+                &:focus~.l-x,
+                &:valid~.l-x {
+                    color: var(--player-x-hue);
+                }
+                &:focus~.l-o,
+                &:valid~.l-o {
+                    color: var(--player-o-hue);
+                }
+                &:focus~.lc-x,
+                &:valid~.lc-x {
+                    .object-x {
+                        stroke-dashoffset: 0;
+                    }
+                }
+                &:focus~.lc-o,
+                &:valid~.lc-o {
+                    .object-o {
+                        stroke-dashoffset: 0;
+                    }
+                }
+            }
+        }
+    }
+    .start-g {
+        border: unset;
+        background: none;
+        font-size: 24px;
+        border: solid 2px #ffffff;
+        padding: .3em 5em;
+        border-radius: 20px;
+        &:after {
+            background-color: rgba(#ffffff, 1);
+        }
+        &:hover {
+            color: var(--main-bckg-hue);
+        }
+    }
+}
+
+.label-ico {
+    position: absolute;
+    right: 2px;
+}
+
+// .show-up {
+//     animation: fill-line 1s ease-in-out infinite;
+// }
+.object-o {
+    fill: none;
+    height: 20px;
+    stroke: var(--player-o-hue);
+    stroke-width: 3;
+    stroke-dasharray: 263.893782901543;
+    stroke-dashoffset: 263.893782901543;
+    vertical-align: top;
+    width: 20px;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.object-x {
+    fill: none;
+    height: 20px;
+    stroke: var(--player-x-hue);
+    stroke-width: 3;
+    stroke-dasharray: 263.893782901543;
+    stroke-dashoffset: 263.893782901543;
+    vertical-align: top;
+    width: 20px;
+    transition: stroke-dashoffset 1s ease-in-out;
+}

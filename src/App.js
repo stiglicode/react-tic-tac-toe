@@ -11,13 +11,13 @@ import Game from './view/Game';
 const App = () => (
     <Router>
         <Switch>
-            {/* <Route path="/" exact>
-                <Redirect to="/menu" />
+            <Route path="/" exact>
+                <Redirect to="/game" />
+            </Route>
+            {/* <Route path="/menu" exact>
+                <Menu />
             </Route> */}
             <Route path="/game" exact>
-                <Menu />
-            </Route>
-            <Route path="/game">
                 <Game />
             </Route>
         </Switch>

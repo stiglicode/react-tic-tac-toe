@@ -5,21 +5,21 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import './style/css/main.css';
 
 // views
-// import Menu from './view/Menu';
-import Game from './view/Game';
+import Menu from './view/Menu';
+// import Game from './view/Game';
 
 const App = () => (
     <Router>
         <Switch>
             <Route path="/" exact>
-                <Redirect to="/game" exact/>
+                <Redirect to="/menu" />
             </Route>
-            {/* <Route path="/menu" exact>
+            <Route path="/menu" exact>
                 <Menu />
-            </Route> */}
-            <Route path="/game">
-                <Game />
             </Route>
+            {/* <Route path="/game">
+                <Game />
+            </Route> */}
         </Switch>
     </Router>
 );

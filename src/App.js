@@ -6,7 +6,7 @@ import './style/css/main.css';
 
 // views
 import Menu from './view/Menu';
-import Game from './view/Game';
+// import Game from './view/Game';
 
 const App = () => (
     <Router>
@@ -17,9 +17,9 @@ const App = () => (
             <Route path="/menu" exact>
                 <Menu />
             </Route>
-            <Route path="/game">
+            {/* <Route path="/game">
                 <Game />
-            </Route>
+            </Route> */}
         </Switch>
     </Router>
 );

@@ -17,7 +17,7 @@ class PvP extends React.Component {
                 <span className="pvp-title b">Write down your nicknames</span>
                 <div className="setter-nicknames column">
                     <div className="nicknames sn-x">
-                        <input type="text" id="px" required/>
+                        <input type="text" id="px" required />
                         <div className="label-ico lc-x">
                             <svg className="object-x show-up" xmlns="http://www.w3.org/2000/svg">
                                 <line x1="1" y1="19" x2="19" y2="1"/>
@@ -27,7 +27,7 @@ class PvP extends React.Component {
                         <label className="l-x">Player X nickname</label>
                     </div>
                     <div className="nicknames sn-o">
-                        <input type="text" id="po" required/>
+                        <input type="text" id="po" required />
                         <label className="l-o">Player O nickname</label>
                         <div className="label-ico lc-o">
                             <svg className="object-o show-up" xmlns="http://www.w3.org/2000/svg">

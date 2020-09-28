@@ -1,9 +1,9 @@
 import React from 'react';
 import './css/Logo.components.css';
 
-const Logo = (size) => {
+const Logo = (props) => {
     return (
-        <span className="upper logo-ttt" style={{fontSize: size}}>
+        <span className="logo-ttt" style={{fontSize: props.size}}>
             Tic 
             <span> tac </span>
             toe

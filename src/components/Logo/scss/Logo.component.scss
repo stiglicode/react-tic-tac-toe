@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@515&display=swap');
 .logo-ttt {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
     span {
         color: var(--player-o-hue);
     }

@@ -10,6 +10,9 @@ import MP from '../components/Menu/Multiplayer';
 // components 
 import HomeReturn from './../components/HomeReturn';
 
+// Logo 
+import Logo from './../components/Logo';
+
 
 const Menu = () => {
     const [title, setTitle] = useState('');
@@ -34,11 +37,7 @@ const Menu = () => {
     return (
         <div className="menu-cont">
             <div className="menu-logo">
-                <span className="upper">
-                    Tic 
-                    <span style={{color: "var(--player-o-hue)"}}> tac </span>
-                    toe
-                </span>
+                <Logo size="5em" />
             </div>
             <div className="menu-row column">
                 <HomeReturn returnMenu={changeMenu} style={(UImenuKey === 1) ? {display: "none"} : null} />   

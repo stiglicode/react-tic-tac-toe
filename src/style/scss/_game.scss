@@ -1,0 +1,13 @@
+#__root {
+    padding: 0 !important;
+}
+
+.game-wrapper {
+    width: 100%;
+    display: flex;
+    .playfield {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: auto 50% auto;
+    }
+}

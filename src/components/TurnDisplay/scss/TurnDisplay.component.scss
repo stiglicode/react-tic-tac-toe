@@ -1,0 +1,4 @@
+@import './../../../style/scss/mixins';
+.turn-D-box {
+    @include border("right");
+}

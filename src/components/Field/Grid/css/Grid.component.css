@@ -18,6 +18,11 @@
   border-right: solid 2px rgba(255, 255, 255, 0.5);
   position: relative;
   z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default;
 }
 
 .plyr-box:hover {
@@ -29,5 +34,22 @@
   transition: transform .3s, -webkit-transform .3s;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-  background-color: var(--grid-o-hue);
+}
+
+.set-O {
+  background-color: var(--player-o-hue) !important;
+}
+
+.set-O:hover {
+  -webkit-transform: unset !important;
+          transform: unset !important;
+}
+
+.set-X {
+  background-color: var(--player-x-hue) !important;
+}
+
+.set-X:hover {
+  -webkit-transform: unset !important;
+          transform: unset !important;
 }

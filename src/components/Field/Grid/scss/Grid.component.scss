@@ -9,11 +9,26 @@ $border-preset: solid 2px rgba(#ffffff, .5);
     @include grid-border("all", $border-preset);
     position: relative;
     z-index: 1;
+    user-select: none;
+    cursor: default;
     &:hover {
         position: relative;
         z-index: 2;
         transition: transform .3s;
         transform: scale(1.1);
-        background-color: var(--grid-o-hue);
+    }
+}
+
+.set-O {
+    background-color: var(--player-o-hue) !important;
+    &:hover {
+        transform: unset !important;
+    }
+}
+
+.set-X {
+    background-color: var(--player-x-hue) !important;
+    &:hover {
+        transform: unset !important;
     }
 }

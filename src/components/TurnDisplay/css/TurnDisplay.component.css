@@ -1,3 +1,35 @@
 .turn-D-box {
   border-right: solid 1px rgba(255, 255, 255, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.turn-D-box .turner {
+  padding: 1rem 4em;
+  font-size: 24px;
+  border-radius: 1000px;
+  border-width: 2px;
+  border-style: solid;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.turn-D-box .turner::before {
+  font-weight: 700;
+}
+
+.turn-D-box .turner-name {
+  padding: .5em 1.5em;
+  margin-bottom: 1em;
+  border-left: solid 1px rgba(255, 255, 255, 0.3);
+  border-right: solid 1px rgba(255, 255, 255, 0.3);
 }

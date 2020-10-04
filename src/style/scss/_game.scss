@@ -8,6 +8,67 @@
     .playfield {
         flex-grow: 1;
         display: grid;
-        grid-template-columns: auto 50% auto;
+        grid-template-columns: auto 60% auto;
+    }
+}
+
+.p-O__txt {
+    color: var(--player-o-hue);
+    .ws-pn {
+        color: var(--player-o-hue);
+    }
+}
+
+.p-O__bcg {
+    background-color: var(--player-o-hue);
+    .ws-pn {
+        background-color: var(--player-o-hue);
+    }
+}
+
+.p-X__txt {
+    color: var(--player-x-hue);
+    .ws-pn {
+        color: var(--player-x-hue);
+    }
+}
+
+.player-O {
+    .turn-D-box {
+        .turner-name {
+            border-color: var(--player-o-hue);
+        }
+        .turner {
+            color: var(--player-o-hue);
+            &::before {
+                content: "O ";
+            }
+            border-color: var(--player-o-hue)
+        }
+    }
+    .plyr-box {
+        &:hover {
+            background-color: var(--player-o-hue);
+        }
+    }
+}
+
+.player-X {
+    .turn-D-box {
+        .turner-name {
+            border-color: var(--player-x-hue);
+        }
+        .turner {
+            color: var(--player-x-hue);
+            &::before {
+                content: "X ";
+            }
+            border-color: var(--player-x-hue)
+        }
+    }
+    .plyr-box {
+        &:hover {
+            background-color: var(--player-x-hue);
+        }
     }
 }

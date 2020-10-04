@@ -1,10 +1,9 @@
 import React from 'react';
 import './css/Grid.component.css';
-    
-const Grid = () => {
+
+const Grid = (props) => {
     return (
-    <div className="plyr-box m-p">
-        Player Gird X/O
+    <div className="plyr-box m-p" grid={props.gridID}>
     </div>
 )};
 export default Grid;

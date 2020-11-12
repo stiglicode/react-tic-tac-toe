@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 // Header 
 import HeaderMenu from './../components/HeaderMenu';
@@ -7,27 +7,35 @@ import TurnDisplay from './../components/TurnDisplay';
 import Field from './../components/Field';
 import Stats from './../components/Stats';
 
-const Game = () => {
-    const [onTurn, setTurn] = useState(null);
+import { normClass, numSymbol } from './../normalize-class';
+import { randomize as randomSymbol} from './../randomize'
+import { temp_3x3 as temp } from '../components/Field/Grid/grid-template'; 
 
-    const callTurn = (turn) => {
-        setTurn(turn);
+const Game = (props) => {
+    const handleAfterClick = (state) => {
+        setSymbol(state);
     }
-    const callClass = () => {
-        const reset = (onTurn === null) ? setTurn("X") : false;
-        if(onTurn === "X") {
-            return "player-X"
-        } else  if(onTurn === "O") {
-            return "player-O"
-        }
-        return reset;
+    /** 
+    States
+    */
+    const [symbol,setSymbol] = useState(numSymbol(randomSymbol(1,2)));
+    const [gridTemplate, updateGrid] = useState(temp.grid);
+    const [gridLength, setGridLength] = useState(temp.grid.length);
+    const [gridSheet, setGridSheet] = useState(temp.sheet);
+
+    // -end- states
+
+    const updateG = (pos, symbol) => {
+        let template = gridTemplate;
+        template.splice(pos,1, symbol);
+        updateGrid(template);
     }
     return (
     <div className="game-wrapper column">
         <HeaderMenu />
-        <div className={`playfield bs-padd ${callClass()}`}>
+        <div className={`playfield bs-padd ${normClass(symbol, "player")}`}>
             <TurnDisplay />
-            <Field getTurn={callTurn} />
+            <Field initialSymbol={symbol} changeAfterClick={handleAfterClick} sheet={normClass(symbol, "set")} temp={{gridSheet, gridLength, gridTemplate}} update={updateG}/>
             <Stats />
         </div>
     </div>

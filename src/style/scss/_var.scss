@@ -1,9 +1,11 @@
 :root {
     --player-x-hue: #F9D56E;
     --player-o-hue: #E8505B;
-    --main-bckg-hue: #3B6978;
+    --main-bckg-hue: #3b5378;
+    --grid-o-hue: #6E626F;
+    --grid-x-hue: #738975;
 }
 
 $x-hue: var(--player-x-hue);
-$y-hue: var(--player-y-hue);
+$o-hue: var(--player-o-hue);
 $bckg-hue: var(--main-bckg-hue);

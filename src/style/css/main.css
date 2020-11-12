@@ -3,7 +3,9 @@
 :root {
   --player-x-hue: #F9D56E;
   --player-o-hue: #E8505B;
-  --main-bckg-hue: #3B6978;
+  --main-bckg-hue: #3b5378;
+  --grid-o-hue: #6E626F;
+  --grid-x-hue: #738975;
 }
 
 /* Normalize style document */
@@ -71,6 +73,124 @@ h6 {
           flex-direction: row;
 }
 
+.bs-padd {
+  padding: 30px;
+}
+
+.bs-padd-sd {
+  padding: 0 30px 0 30px;
+}
+
+.justify-right,
+.justify-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.justify-left,
+.justify-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.justify-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.justify-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.justify-evenly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.justify-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.justify-stretch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+.align-bottom,
+.align-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.align-top,
+.align-start {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.align-between {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.align-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.justify-stretch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
 body {
   height: 100vh;
   display: -webkit-box;
@@ -85,7 +205,10 @@ body #__root {
   display: flex;
   width: 100%;
   height: inherit;
-  padding: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .upper {
@@ -140,3 +263,85 @@ body #__root {
   top: 0;
   height: 100%;
 }
+<<<<<<< HEAD
+=======
+
+#__root {
+  padding: 0 !important;
+}
+
+.game-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.game-wrapper .playfield {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 60% auto;
+      grid-template-columns: auto 60% auto;
+}
+
+.p-O__txt {
+  color: var(--player-o-hue);
+}
+
+.p-O__txt .ws-pn {
+  color: var(--player-o-hue);
+}
+
+.p-O__bcg {
+  background-color: var(--player-o-hue);
+}
+
+.p-O__bcg .ws-pn {
+  background-color: var(--player-o-hue);
+}
+
+.p-X__txt {
+  color: var(--player-x-hue);
+}
+
+.p-X__txt .ws-pn {
+  color: var(--player-x-hue);
+}
+
+.player-O .turn-D-box .turner-name {
+  border-color: var(--player-o-hue);
+}
+
+.player-O .turn-D-box .turner {
+  color: var(--player-o-hue);
+  border-color: var(--player-o-hue);
+}
+
+.player-O .turn-D-box .turner::before {
+  content: "O ";
+}
+
+.player-O .plyr-box:hover {
+  background-color: var(--player-o-hue);
+}
+
+.player-X .turn-D-box .turner-name {
+  border-color: var(--player-x-hue);
+}
+
+.player-X .turn-D-box .turner {
+  color: var(--player-x-hue);
+  border-color: var(--player-x-hue);
+}
+
+.player-X .turn-D-box .turner::before {
+  content: "X ";
+}
+
+.player-X .plyr-box:hover {
+  background-color: var(--player-x-hue);
+}
+>>>>>>> game-playground

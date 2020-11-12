@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import './css/Logo.components.css';
+=======
+import './css/Logo.component.css';
+>>>>>>> game-playground
 
 const Logo = (props) => {
     return (

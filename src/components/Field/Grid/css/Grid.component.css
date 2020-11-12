@@ -1,0 +1,89 @@
+.plyr-box {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  border-top: solid 2px rgba(255, 255, 255, 0.5);
+  border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+  border-left: solid 2px rgba(255, 255, 255, 0.5);
+  border-right: solid 2px rgba(255, 255, 255, 0.5);
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: default;
+}
+
+.plyr-box:hover {
+  position: relative;
+  z-index: 2;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.set-O {
+  background-color: var(--player-o-hue) !important;
+}
+
+.set-O:hover {
+  -webkit-transform: unset !important;
+          transform: unset !important;
+}
+
+.set-O::before {
+  content: "o";
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 5em;
+}
+
+.set-X {
+  background-color: var(--player-x-hue) !important;
+}
+
+.set-X:hover {
+  -webkit-transform: unset !important;
+          transform: unset !important;
+}
+
+.set-X::before {
+  content: "x";
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 5em;
+}

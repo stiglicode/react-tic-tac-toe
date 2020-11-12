@@ -24,11 +24,31 @@ $border-preset: solid 2px rgba(#ffffff, .5);
     &:hover {
         transform: unset !important;
     }
+    &::before {
+        content: "o";
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 5em;
+    }
 }
 
 .set-X {
     background-color: var(--player-x-hue) !important;
     &:hover {
         transform: unset !important;
+    }
+    &::before {
+        content: "x";
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 5em;
     }
 }

@@ -49,6 +49,16 @@
     .plyr-box {
         &:hover {
             background-color: var(--player-o-hue);
+            // &::before {
+            //     content: "o";
+            //     position: absolute;
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            //     text-transform: uppercase;
+            //     color: #ffffff;
+            //     font-size: 5em;
+            // }
         }
     }
 }
@@ -69,6 +79,16 @@
     .plyr-box {
         &:hover {
             background-color: var(--player-x-hue);
+            // &::before {
+            //     content: "x";
+            //     position: absolute;
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            //     text-transform: uppercase;
+            //     color: #ffffff;
+            //     font-size: 5em;
+            // }
         }
     }
 }

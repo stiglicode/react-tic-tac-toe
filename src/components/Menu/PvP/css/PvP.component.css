@@ -1,0 +1,124 @@
+.m--pvp {
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.m--pvp .setter-nicknames {
+  width: 100%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.m--pvp .setter-nicknames .nicknames {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.m--pvp .setter-nicknames .nicknames label {
+  position: absolute;
+  font-size: 20px;
+  pointer-events: none;
+  top: 0px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: .3;
+  left: .7em;
+}
+
+.m--pvp .setter-nicknames .nicknames input[type=text] {
+  width: 100%;
+  background: none;
+  border: unset;
+  border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+  padding-left: .7em;
+  padding-right: 1.5em;
+}
+
+.m--pvp .setter-nicknames .nicknames input[type=text]:focus ~ label,
+.m--pvp .setter-nicknames .nicknames input[type=text]:valid ~ label {
+  font-size: 16px;
+  top: -30px;
+  left: 0;
+  opacity: 1;
+}
+
+.m--pvp .setter-nicknames .nicknames input[type=text]:focus ~ .l-x,
+.m--pvp .setter-nicknames .nicknames input[type=text]:valid ~ .l-x {
+  color: var(--player-x-hue);
+}
+
+.m--pvp .setter-nicknames .nicknames input[type=text]:focus ~ .l-o,
+.m--pvp .setter-nicknames .nicknames input[type=text]:valid ~ .l-o {
+  color: var(--player-o-hue);
+}
+
+.m--pvp .setter-nicknames .nicknames input[type=text]:focus ~ .lc-x .object-x,
+.m--pvp .setter-nicknames .nicknames input[type=text]:valid ~ .lc-x .object-x {
+  stroke-dashoffset: 0;
+}
+
+.m--pvp .setter-nicknames .nicknames input[type=text]:focus ~ .lc-o .object-o,
+.m--pvp .setter-nicknames .nicknames input[type=text]:valid ~ .lc-o .object-o {
+  stroke-dashoffset: 0;
+}
+
+.m--pvp .start-g {
+  border: unset;
+  background: none;
+  font-size: 24px;
+  border: solid 2px #ffffff;
+  padding: .3em 5em;
+  border-radius: 20px;
+}
+
+.m--pvp .start-g:after {
+  background-color: white;
+}
+
+.m--pvp .start-g:hover {
+  color: var(--main-bckg-hue);
+}
+
+.label-ico {
+  position: absolute;
+  right: 2px;
+}
+
+.object-o {
+  fill: none;
+  height: 20px;
+  stroke: var(--player-o-hue);
+  stroke-width: 3;
+  stroke-dasharray: 263.893782901543;
+  stroke-dashoffset: 263.893782901543;
+  vertical-align: top;
+  width: 20px;
+  -webkit-transition: stroke-dashoffset 1s ease-in-out;
+  transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.object-x {
+  fill: none;
+  height: 20px;
+  stroke: var(--player-x-hue);
+  stroke-width: 3;
+  stroke-dasharray: 263.893782901543;
+  stroke-dashoffset: 263.893782901543;
+  vertical-align: top;
+  width: 20px;
+  -webkit-transition: stroke-dashoffset 1s ease-in-out;
+  transition: stroke-dashoffset 1s ease-in-out;
+}

@@ -1,0 +1,36 @@
+@mixin border($side) {
+    $color: rgba(255, 255, 255, 0.3);
+    @if $side=="left" {
+        border-left: solid 1px $color;
+    }
+    @if $side=="right" {
+        border-right: solid 1px $color;
+    }
+    @if $side=="top" {
+        border-top: solid 1px $color;
+    }
+    @if $side=="bottom" {
+        border-bottom: solid 1px $color;
+    }
+}
+
+@function import-component($componentName) {
+    @return './../../components/#{$componentName}/scss/#{$componentName}.component.scss';
+}
+
+@mixin grid-border($side, $preset) {
+    @if $side=="lr" {
+        border-left: $preset;
+        border-right: $preset;
+    }
+    @if $side=="tb" {
+        border-top: $preset;
+        border-bottom: $preset;
+    }
+    @if $side=="all" {
+        border-top: $preset;
+        border-bottom: $preset;
+        border-left: $preset;
+        border-right: $preset;
+    }
+}

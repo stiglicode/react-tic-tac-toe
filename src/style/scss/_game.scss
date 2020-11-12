@@ -1,0 +1,94 @@
+#__root {
+    padding: 0 !important;
+}
+
+.game-wrapper {
+    width: 100%;
+    display: flex;
+    .playfield {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: auto 60% auto;
+    }
+}
+
+.p-O__txt {
+    color: var(--player-o-hue);
+    .ws-pn {
+        color: var(--player-o-hue);
+    }
+}
+
+.p-O__bcg {
+    background-color: var(--player-o-hue);
+    .ws-pn {
+        background-color: var(--player-o-hue);
+    }
+}
+
+.p-X__txt {
+    color: var(--player-x-hue);
+    .ws-pn {
+        color: var(--player-x-hue);
+    }
+}
+
+.player-O {
+    .turn-D-box {
+        .turner-name {
+            border-color: var(--player-o-hue);
+        }
+        .turner {
+            color: var(--player-o-hue);
+            &::before {
+                content: "O ";
+            }
+            border-color: var(--player-o-hue)
+        }
+    }
+    .plyr-box {
+        &:hover {
+            background-color: var(--player-o-hue);
+            // &::before {
+            //     content: "o";
+            //     position: absolute;
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            //     text-transform: uppercase;
+            //     color: #ffffff;
+            //     font-size: 5em;
+            // }
+        }
+    }
+}
+
+.player-X {
+    .turn-D-box {
+        .turner-name {
+            border-color: var(--player-x-hue);
+        }
+        .turner {
+            color: var(--player-x-hue);
+            &::before {
+                content: "X ";
+            }
+            border-color: var(--player-x-hue)
+        }
+    }
+    .plyr-box {
+        &:hover {
+            background-color: var(--player-x-hue);
+            // &::before {
+            //     content: "x";
+            //     position: absolute;
+            //     display: flex;
+            //     justify-content: center;
+            //     align-items: center;
+            //     text-transform: uppercase;
+            //     color: #ffffff;
+            //     font-size: 5em;
+            // }
+        }
+    }
+}

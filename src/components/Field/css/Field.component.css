@@ -1,0 +1,33 @@
+.fld-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fld-box_border {
+  border: solid 5px rgba(255, 255, 255, 0.4);
+  width: 700px;
+  height: 700px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.fld-box .temp-grid-3x3 {
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+}
+
+.fld-box .temp-grid-4x4 {
+  -ms-grid-columns: auto auto auto auto;
+      grid-template-columns: auto auto auto auto;
+  -ms-grid-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
+}

@@ -277,6 +277,7 @@ body #__root {
   display: flex;
 }
 
+<<<<<<< HEAD
 .game-wrapper .playfield {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -285,6 +286,16 @@ body #__root {
   display: grid;
   -ms-grid-columns: auto 60% auto;
       grid-template-columns: auto 60% auto;
+=======
+.menu-cont .menu-logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  position: absolute;
+  top: 0;
+  padding: 0 1em .5rem 1em;
+>>>>>>> main-menu
 }
 
 .p-O__txt {

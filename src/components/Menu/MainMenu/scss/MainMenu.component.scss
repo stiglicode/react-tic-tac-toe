@@ -1,0 +1,12 @@
+.m--mm {
+    align-items: center;
+    .m-m-row:not(:last-child) {
+        margin-bottom: 1em;
+    }
+    .m-m-row {
+        user-select: none;
+        text-align: center;
+        z-index: 1;
+        padding: .5em 0;
+    }
+}

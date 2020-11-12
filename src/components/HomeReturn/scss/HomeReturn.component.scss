@@ -1,0 +1,34 @@
+.back-home {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -5rem;
+    top: 0px;
+    transition: .3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    border: solid 2px #ffffff;
+    padding: 10px;
+    box-sizing: content-box;
+    border-radius: 20px;
+    &:hover {
+        transition: background-color .3s ease .4s;
+        background-color: rgba(#ffffff, .1);
+    }
+    &:hover>.svg-home {
+        fill-opacity: 1;
+        stroke-dashoffset: 263.893782901543;
+        transition: stroke-dashoffset .4s ease, fill-opacity .2s ease .4s
+    }
+    .svg-home {
+        fill: #ffffff;
+        fill-opacity: 0;
+        height: 40px;
+        width: 40px;
+        stroke: #ffffff;
+        stroke-width: 2;
+        stroke-dasharray: 263.893782901543;
+        transition: stroke-dashoffset .4s ease .2s, fill-opacity .2s ease;
+    }
+}

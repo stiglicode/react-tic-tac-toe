@@ -12,7 +12,7 @@ const App = () => (
     <Router>
         <Switch>
             <Route path="/" exact>
-                <Redirect to="/game" />
+                <Game />
             </Route>
             <Route path="/menu" exact>
                 <Menu />

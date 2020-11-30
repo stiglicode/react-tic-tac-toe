@@ -1,69 +1,120 @@
 import React from 'react';
 import './css/Field.component.css';
 
-import Grid from './Grid';
+import Square from './Square';
 
 class Field extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            symbol: this.props.initialSymbol,
-            winner: false,
-            sheet: this.props.sheet,
+            winner: {
+                winnerStatus: null,
+                winnerSymbol: undefined
+            },
             lastPosition: null,
-            gridSize: this.props.temp.gridLength
+            totalWins: [],
+            plyrNamesArr: []
         }
+        this.totalWinsArr = [];
+        this.playersNames = [];
     }
-    // componentDidMount() {
-    //     console.log(this.props.temp.gridTemplate);
-    //     console.log(this.state.symbol);
-    // }
+    callBackSymbol = (data) => {
+        return this.props.returnSymbol(data);
+    }
     
-    componentDidUpdate() {
-        const symbol = this.state.symbol,
-        gridTemp = this.props.temp.gridTemplate,
-        pos = this.state.lastPosition;
-        this.props.changeAfterClick(symbol);
-// -------------------------------------------------------------------
-        console.log(gridTemp);
-        console.log(symbol);
-        console.log(pos);
-    }
-    handleGridEvent = (ele) => {
-        const gridPos = ele.target.getAttribute('grid'),
-        sheet = this.state.sheet,
-        symbol = this.state.symbol,
-        gridTemp = this.props.temp.gridTemplate,
-        __target = ele.target,
-        pos = this.state.lastPosition;
-
-        if(!this.repeatPrev(ele)) return  
-        else {
-            __target.classList.add(sheet);
-            this.setState({lastPosition: gridPos});
-            this.changePlayer();
-            this.props.update(pos, symbol);
-// -------------------------------------------------------------------
-           
+    setWinner = (data) => {
+        if(data || !data){
+            this.setState((state,) => { 
+                return {
+                    ...state, winner: {
+                        winnerStatus: data,
+                        winnerSymbol: this.props.symbol,
+                    } 
+                }
+            });    
+        }
+        if(data) {
+            if(this.props.symbol === "X"){
+                this.totalWinsArr.push("X");
+                this.playersNames.push(this.props.playersNames["_X_"]);
+            }else if(this.props.symbol === "O"){
+                this.totalWinsArr.push("O");
+                this.playersNames.push(this.props.playersNames["_O_"]);
+            }
+            // for (const key in this.props.playersNames) {
+            //     if(key[1] === this.props.symbol) {
+            //         this.totalWinsArr.push(this.props.playersNames[key]);
+            //     } 
+            // }
+            this.setState((state,) => { 
+                return {  
+                    ...state,
+                    totalWins: [this.totalWinsArr],
+                    plyrNamesArr: [this.playersNames]
+                }
+            });
         }
     }
-    changePlayer = () => {
-        if(this.state.symbol === "X") return this.setState({symbol: "O", sheet: "set-O"});      
-        else if(this.state.symbol === "O") return this.setState({symbol: "X", sheet: "set-X"});
-        else return false    
+    componentDidUpdate = () => {
+        this.props.countedGames(this.state.totalWins);
+        this.props.returnPlayers(this.state.plyrNamesArr);
+        if(this.props.resetField === true){
+            if(typeof this.state.winner.winnerSymbol === "string"){
+                this.setState((state,) => { 
+                    return { 
+                        ...state,
+                        winner: {
+                            winnerStatus: null,
+                            winnerSymbol: undefined
+                        },
+                        lastPosition: this.props.template.grid,
+                    }
+                });
+                
+            }
+            const squares = document.querySelectorAll(".plyr-box");
+            squares.forEach((square) => {
+                const className = square.classList;
+                if(className.contains("set-X")){
+                    className.remove("set-X")
+                }
+                if(className.contains("set-O")){
+                    className.remove("set-O")
+                }
+            })   
+        }
     }
-    repeatPrev = (ele) => {
-        return (ele.target.getAttribute('grid') && ele.target.classList.length === 2) ? true : false;
+   
+    callBackGridID = (data) => {
+        const template = this.props.template.grid;
+        template.splice(data.pos, 1, data.symbol);
+        this.setState({lastPosition: template});
+        return setTimeout(()=>{
+            if(this.state.winner.winnerStatus !== null){
+                return this.props.status(this.state.winner);
+            }
+        }, 1)
     }
     render() {
         return(
         <div className="fld-box">
-            <div className={`fld-box_border ${this.props.temp.gridSheet}`} onClick={this.handleGridEvent}>
-                {[...Array(this.state.gridSize)].map((e, i) => <Grid key={i} gridID={i}/>)}
+            <div className={`fld-box_border ${this.props.template.sheet}`}>
+                {[...Array(this.props.template.grid.length)].map((e, i) => 
+                <Square 
+                    key={i} 
+                    gridID={i} 
+                    __return_gridID={this.callBackGridID} 
+                    sheet={this.props.sheet}
+                    position={this.state.lastPosition}
+                    symbol={this.props.symbol}
+                    __return_Symbol={this.callBackSymbol}
+                    winnerSetter={this.setWinner}
+                />
+                )}
             </div>
         </div>
         )
     }
 }
 
-export default Field;
+export default Field; 

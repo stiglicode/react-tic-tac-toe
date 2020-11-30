@@ -1,0 +1,177 @@
+.victory-alert {
+  position: absolute;
+  z-index: 901;
+  -ms-flex-item-align: center;
+      align-self: center;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+}
+
+.victory-alert h1,
+.victory-alert span {
+  font-size: 2rem;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  opacity: 0;
+}
+
+.victory-alert h1 {
+  -webkit-animation-name: onNoff-h;
+          animation-name: onNoff-h;
+}
+
+.victory-alert span {
+  -webkit-animation-name: onNoff-span;
+          animation-name: onNoff-span;
+}
+
+.victory-title h1 {
+  font-size: 5em;
+}
+
+.victory-title span {
+  font-size: 3em;
+}
+
+@-webkit-keyframes onNoff-h {
+  0% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+  50% {
+    opacity: 1;
+    font-size: 5rem;
+  }
+  60% {
+    opacity: 1;
+    font-size: 5rem;
+  }
+  70% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+  100% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+}
+
+@keyframes onNoff-h {
+  0% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+  50% {
+    opacity: 1;
+    font-size: 5rem;
+  }
+  60% {
+    opacity: 1;
+    font-size: 5rem;
+  }
+  70% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+  100% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+}
+
+@-webkit-keyframes onNoff-span {
+  0% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+  50% {
+    opacity: 1;
+    font-size: 8rem;
+  }
+  60% {
+    opacity: 1;
+    font-size: 8rem;
+  }
+  70% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+  100% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+}
+
+@keyframes onNoff-span {
+  0% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+  50% {
+    opacity: 1;
+    font-size: 8rem;
+  }
+  60% {
+    opacity: 1;
+    font-size: 8rem;
+  }
+  70% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+  100% {
+    opacity: 0;
+    font-size: 2rem;
+  }
+}
+
+.victory-popUp {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: getVisiable;
+          animation-name: getVisiable;
+}
+
+@-webkit-keyframes getVisiable {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes getVisiable {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

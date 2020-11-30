@@ -1,0 +1,101 @@
+.victory-alert {
+    position: absolute;
+    z-index: 901;
+    align-self: center;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    pointer-events: none;
+    h1,
+    span {
+        font-size: 2rem;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+        animation-iteration-count: 1;
+        opacity: 0;
+    }
+    h1 {
+        animation-name: onNoff-h;
+    }
+    span {
+        animation-name: onNoff-span;
+    }
+}
+
+.victory-title {
+    h1 {
+        font-size: 5em;
+    }
+    span {
+        font-size: 3em;
+    }
+}
+
+@keyframes onNoff-h {
+    0% {
+        opacity: 0;
+        font-size: 2rem;
+    }
+    50% {
+        opacity: 1;
+        font-size: 5rem;
+    }
+    60% {
+        opacity: 1;
+        font-size: 5rem;
+    }
+    70% {
+        opacity: 0;
+        font-size: 2rem;
+    }
+    100% {
+        opacity: 0;
+        font-size: 2rem;
+    }
+}
+
+@keyframes onNoff-span {
+    0% {
+        opacity: 0;
+        font-size: 2rem;
+    }
+    50% {
+        opacity: 1;
+        font-size: 8rem;
+    }
+    60% {
+        opacity: 1;
+        font-size: 8rem;
+    }
+    70% {
+        opacity: 0;
+        font-size: 2rem;
+    }
+    100% {
+        opacity: 0;
+        font-size: 2rem;
+    }
+}
+
+.victory-popUp {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-name: getVisiable;
+}
+
+@keyframes getVisiable {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

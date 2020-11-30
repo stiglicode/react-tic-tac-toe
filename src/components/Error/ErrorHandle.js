@@ -7,7 +7,7 @@ const InProgress = (props) => {
                 <span style={{fontWeight: "700"}}>{props.pageName} </span>
                 is in progress
             </span>
-            <span style={{color: "var(--player-x-hue)"}} >Please, return home 🏠</span>
+            <span style={{color: "var(--player-x-hue)"}} >Please, return home <span onClick={() => {window.location.href = "/"}} className="m-p">🏠</span></span>
         </div>
         
     )

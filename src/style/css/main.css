@@ -191,6 +191,246 @@ h6 {
           align-items: stretch;
 }
 
+.w-100 {
+  width: 100%;
+}
+
+/* FONTS size fromat document */
+/* © Milan Štiglic*/
+.size-2px {
+  font-size: 2px;
+}
+
+.size-4px {
+  font-size: 4px;
+}
+
+.size-6px {
+  font-size: 6px;
+}
+
+.size-8px {
+  font-size: 8px;
+}
+
+.size-10px {
+  font-size: 10px;
+}
+
+.size-12px,
+.basic-size {
+  font-size: 12px;
+}
+
+.size-14px {
+  font-size: 14px;
+}
+
+.size-16px {
+  font-size: 16px;
+}
+
+.size-18px {
+  font-size: 18px;
+}
+
+.size-20px,
+.footer-h-size {
+  font-size: 20px;
+}
+
+.size-22px {
+  font-size: 22px;
+}
+
+.size-24px {
+  font-size: 24px;
+}
+
+.size-26px {
+  font-size: 26px;
+}
+
+.size-28px {
+  font-size: 28px;
+}
+
+.size-30px {
+  font-size: 30px;
+}
+
+.size-32px,
+.medium-size {
+  font-size: 32px;
+}
+
+.size-34px {
+  font-size: 34px;
+}
+
+.size-36px {
+  font-size: 36px;
+}
+
+.size-38px {
+  font-size: 38px;
+}
+
+.size-40px {
+  font-size: 40px;
+}
+
+.size-42px {
+  font-size: 42px;
+}
+
+.size-44px {
+  font-size: 44px;
+}
+
+.size-46px {
+  font-size: 46px;
+}
+
+.size-48px {
+  font-size: 48px;
+}
+
+.size-50px {
+  font-size: 50px;
+}
+
+.size-52px {
+  font-size: 52px;
+}
+
+.size-54px {
+  font-size: 54px;
+}
+
+.size-56px,
+.header-size {
+  font-size: 56px;
+}
+
+.size-58px {
+  font-size: 58px;
+}
+
+.size-60px {
+  font-size: 60px;
+}
+
+.size-62px {
+  font-size: 62px;
+}
+
+.size-64px {
+  font-size: 64px;
+}
+
+.size-66px {
+  font-size: 66px;
+}
+
+.size-68px {
+  font-size: 68px;
+}
+
+.size-70px {
+  font-size: 70px;
+}
+
+.size-72px,
+.large-size {
+  font-size: 72px;
+}
+
+.size-74px {
+  font-size: 74px;
+}
+
+.size-76px {
+  font-size: 76px;
+}
+
+.size-78px {
+  font-size: 78px;
+}
+
+.size-80px {
+  font-size: 80px;
+}
+
+.size-82px {
+  font-size: 82px;
+}
+
+.size-84px {
+  font-size: 84px;
+}
+
+.size-86px {
+  font-size: 86px;
+}
+
+.size-88px {
+  font-size: 88px;
+}
+
+.size-90px {
+  font-size: 90px;
+}
+
+.size-95px {
+  font-size: 95px;
+}
+
+.size-100px {
+  font-size: 100px;
+}
+
+.size-110px {
+  font-size: 110px;
+}
+
+.size-120px {
+  font-size: 120px;
+}
+
+.size-130px {
+  font-size: 130px;
+}
+
+.size-140px {
+  font-size: 140px;
+}
+
+.size-150px {
+  font-size: 150px;
+}
+
+.size-160px {
+  font-size: 160px;
+}
+
+.size-170px {
+  font-size: 170px;
+}
+
+.size-180px {
+  font-size: 180px;
+}
+
+.size-190px {
+  font-size: 190px;
+}
+
+.size-200px,
+.huge-size {
+  font-size: 200px;
+}
+
 body {
   height: 100vh;
   display: -webkit-box;
@@ -262,6 +502,119 @@ body #__root {
 .sl-t-b:hover::after {
   top: 0;
   height: 100%;
+}
+
+.freez-bckg {
+  position: absolute;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bckg-darken {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop-up-window {
+  width: 40%;
+  height: 50%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 auto;
+  background-color: var(--main-bckg-hue);
+  border: solid 3px;
+  padding: 2rem;
+}
+
+.br-sm {
+  border-radius: 10px;
+}
+
+.c-btn {
+  background: none;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 2rem;
+  width: 40%;
+  cursor: pointer;
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.negative-btn {
+  border: solid 3px #E8505B;
+  color: #E8505B;
+  border-radius: 2rem;
+}
+
+.negative-btn::after {
+  background-color: #E8505B;
+}
+
+.negative-btn:hover {
+  color: var(--main-bckg-hue);
+}
+
+.positive-btn {
+  border: solid 3px #50e858;
+  border-radius: 2rem;
+  color: #50e858;
+}
+
+.positive-btn::after {
+  background-color: #50e858;
+}
+
+.positive-btn:hover {
+  color: var(--main-bckg-hue);
+}
+
+hr {
+  display: block;
+  unicode-bidi: -webkit-isolate;
+  unicode-bidi: isolate;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  overflow: hidden;
+  border-style: none;
+  border-width: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.txt-O {
+  color: var(--player-o-hue);
+}
+
+.txt-X {
+  color: var(--player-x-hue);
+}
+
+.border-X {
+  border-color: var(--player-x-hue);
+}
+
+.border-O {
+  border-color: var(--player-o-hue);
 }
 
 #__root {

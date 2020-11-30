@@ -13,9 +13,5 @@
 }
 
 .h-m .score-count {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   font-size: 1.5em;
 }
